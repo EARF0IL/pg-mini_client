@@ -20,6 +20,7 @@ class MainWin(QMainWindow):
 
     def _initUI(self):
         self.setFixedSize(1500, 800)
+        self.db_password_lineEdit.setEchoMode(QLineEdit.Password)
         self.db_connect_button.clicked.connect(self.connect_db)
         self.select_button.clicked.connect(self.select_table)
         self.tableWidget.cellChanged.connect(self.update_db)
